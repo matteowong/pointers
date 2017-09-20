@@ -15,9 +15,7 @@ int main() {
   int * ip= &arr[9];
   int * rp=&reverse[0];
   while (rp<=&reverse[9]) {
-    *rp=*ip;
-    ip--;
-    rp++;
+    *rp++=*ip--;
   }
   for (i=0;i<10;i++)
     printf("reverse[%d]: %d\n",i,reverse[i]);
